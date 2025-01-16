@@ -255,6 +255,51 @@ img {
     background-color: rgb(247, 245, 247);
     padding-bottom: 80px;
 }
+.projects-box1,
+.projects-box2,
+.projects-box3 {
+    position: relative; /* To allow positioning the button inside the box */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Explore More Button Styles */
+/* Style for Explore More Button */
+.explore-button {
+    position: absolute; /* Position relative to the box */
+    bottom: 10px; /* 10px from the bottom of the box */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Align the button center */
+    padding: 8px 16px; /* Smaller padding for compact size */
+    font-size: 0.85rem; /* Reduce font size */
+    font-weight: bold; /* Bold font for emphasis */
+    color: rgb(241, 30, 65); /* White text */
+   background-color: blanchedalmond; /* Purple background */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Slightly rounded corners */
+    text-transform: uppercase; /* Capitalized text */
+    letter-spacing: 1px; /* Slight spacing between letters */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 0 10px rebeccapurple;; /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth hover effects */
+}
+
+/* Hover Effect */
+.explore-button:hover {
+    color: green; /* Darker purple */
+    transform: translateX(-50%) translateY(-3px); /* Lift on hover */
+     /* Slightly deeper shadow */
+}
+
+/* Button Container */
+.projects-box1, .projects-box2, .projects-box3 {
+    position: relative; /* Ensure button is positioned relative to this box */
+    padding-bottom: 50px; /* Extra space to accommodate the button */
+    overflow: hidden; /* Prevent content overflow */
+}
 
 .projects-container h2{
     padding-top: 60px;
@@ -264,7 +309,7 @@ img {
 }
 .projects-container h2 span{
     color: purple;
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 .projects-section {
             display: flex;
             justify-content: space-between;
@@ -339,88 +384,220 @@ img {
 .projects-box3 p{
     font-family: Arial, Helvetica, sans-serif;
 }
-#contact{
-    background-color:  rgb(247, 245, 247);
-    padding-top: 40px;
-    padding-bottom: 60px;
-}
-.contact .icons-container{
-    align-items: center;
-    justify-content: center;
-    padding-top: 40px;
+
+/* General styles for the Contact page */
+.contact {
+    padding: 50px;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 20px;
-    flex-wrap: wrap;
-}
-.contact .icons-container .icons{
-    flex: 1 1 350px;
-    max-width: 350px;
     text-align: center;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 25px #fcc6ad;
-    border-radius: .5rem;
-    margin: 20px;
-   
-   
+    background-color: rgb(247, 245, 247);
 }
-.contact .icons-container .icons i{
-    height: 5rem;
-    width: 5rem;
-    line-height: 5rem;
-    font-size: 2rem;
-    background: #fae7e1;
-    border-radius: 50%;
-}
-.contact h1{
+
+/* Heading */
+.contact .heading1 {
+    font-size: 35px;
     text-align: center;
-    font-size: 30px;
+    margin-bottom: 20px;
 }
-.contact h1 span{
+
+.contact .heading1 span {
     color: purple;
 }
-#main-footer
-{
-  text-align: center;  
-  background: black;
-  color:#fff;
-  padding: 20px;
+
+/* Container for Content and Form */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
 
-@media (width < 750px) {
-    nav .checkbox{
-        display: block;
-    }
-    ul{
-        position: absolute;
-        width: 100%;
-        height: calc(100vh - 85px);
-        left: -100%;
-        top: 85px;
-        background-color: rgb(247, 245, 247);
+/* Left Content (Text and Description) */
+.contact-content {
+    flex: 1;
+    max-width: 45%;
+    text-align: left;
+    color: black;
+}
+
+/* Paragraph Styling */
+.contact-content p {
+    line-height: 1.5;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+.contact-content p span{
+    font-weight: bold;
+    font-style: oblique;
+    
+}
+
+/* Specific styling for the "Let's work together" text */
+.contact-content .contact-heading {
+    font-size: 2rem;
+   color:  rgb(104, 61, 75);
+    font-weight: bold;
+    margin-bottom: 20px;
+   
+}
+
+/* Right Content (Contact Form) */
+.contact-form {
+    flex: 1 450px;
+    max-width: 40%;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 20px #f5bfa6;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Form Inputs */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: #f4f4f4;
+    color: #333;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #a6a6a6;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #00e6e6;
+    background-color: #fff;
+}
+
+/* Submit Button */
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    color: white;
+    background-color: slategrey;
+    font-size: 1rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #f5bfa6;
+}
+
+.contact-form button:hover {
+    background-color: #681b9e;
+}
+/* Social Icons Container */
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    gap: 20px;  /* Space between icons */
+    justify-content: center;  /* Center the icons */
+    margin-top: 20px;  /* Space between paragraph and icons */
+    margin-bottom: 20px;  /* Space below the icons */
+}
+
+/* Individual Icon Styling */
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;  /* Circular shape */
+    background-color: #f4f4f4;  /* Light background */
+    color: #333;  /* Dark color for icons */
+    font-size: 24px;  /* Icon size */
+    text-decoration: none;  /* Remove underline */
+    transition: all 0.3s ease-in-out;  /* Smooth hover effect */
+}
+
+/* Circle Background on Hover */
+
+/* Individual Icon Colors */
+.social-icon.linkedin {
+    background-color: grey; 
+     /* LinkedIn Blue */
+}
+
+.social-icon.github {
+    background-color: grey;  
+}
+
+.social-icon.facebook {
+    background-color: grey;  /* Facebook Blue */
+}
+
+.social-icon.email {
+    background-color: grey;  /* Email Red (Envelope) */
+}
+
+/* Hover Effect for Each Social Icon */
+.social-icon.linkedin:hover {
+    background-color: #0a66c2;  /* Darker LinkedIn blue */
+}
+
+.social-icon.github:hover {
+    background-color: rgb(31, 31, 31);/* GitHub's dark theme color */
+}
+
+.social-icon.facebook:hover {
+    background-color: #166fe5;  /* Darker Facebook blue */
+}
+
+.social-icon.email:hover {
+    background-color: #cc3e1e;  /* Darker email red */
+}
+#main-footer {
+    background-color: grey; /* Set background to grey */
+    color: white; /* Set text color to white for contrast */
+    text-align: center; /* Center align the text */
+    padding: 5px; /* Add some padding for spacing */
+    position: relative; /* Keep the footer at the bottom of the page */
+    left: 0;
+    width: 100%;
+    bottom: 0; /* Position at the bottom */
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-container {
         flex-direction: column;
-        justify-content: center;
-        gap: 3rem;
+        align-items: center;
+        gap: 30px;
     }
-    nav #check:checked ~ ul{
-        left: 0;
+
+    .contact-content,
+    .contact-form {
+        max-width: 100%;
+        padding: 20px;
     }
-    ul li a{
-        font-size: 1.25rem;
-    }
-    .section-container{
-        padding: 10rem 1rem 5rem 1rem;
+
+    .contact-content {
         text-align: center;
-        grid-template-columns: repeat(1, 1fr);
     }
-    .image{
-        grid-area: 1/1/2/2;
+    .explore-more-btn {
+        font-size: 0.8rem;
+        padding: 2px 5px;
     }
-    .buttons{
-        margin: auto;
-    }
-    
-    
 }
-
-
