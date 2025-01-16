@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dance Studio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
@@ -36,7 +36,7 @@
             Passionate about Web Development, I thrive on combining creativity and technical expertise to craft seamless online experiences.I take pride in staying updated with the latest web development trends and techniques, ensuring that my skills are always cutting-edge and my solutions are forward-thinking.
           </p>
           <div class="buttons">
-           <button class="hire">Hire me</button>
+            <button class="hire" onclick="location.href='#contact'">Hire Me</button>
             <button class="resume">Resume</button>
           </div>
         </div>
@@ -167,6 +167,8 @@
                         <h3>Hotel Webpage</h3>
                         <p>I created a hotel webpage using HTML, CSS, and JavaScript, featuring sections for home, about, and contact. The homepage includes a title and navigation buttons for easy access. The about page highlights hotel facilities and customer reviews, while the contact page offers details and a submission form. I integrated icons for amenities like free meals and fitness rooms, ensuring a visually appealing and functional user experience.</p>
                     </div>
+                    <button class="explore-button" onclick="playVideo('hotel webpage - Personal - Microsoft​ Edge 2024-06-05 19-02-27.mp4')">Explore More</button>
+
                 </div>
                 <div class="projects-box2">
                     <h2>Python</h2>
@@ -175,6 +177,7 @@
                         <h3>Image Conversion App</h3>
                         <p>I created a Python-based image conversion app that seamlessly converts JPEG (JPG) images to PNG and PNG images to JPEG. The app includes file format validation to ensure error-free conversions, notifying users with a success message upon completion. This project highlights my proficiency in Python programming, meticulous attention to detail in user interactions, and commitment to delivering reliable software solutions</p>
                     </div>
+                    <button class="explore-button" onclick="location.href='#'">Explore More</button>
                 </div>
                 <div class="projects-box3">
                     <h2>VLSI</h2>
@@ -183,33 +186,88 @@
                         <h3>Vending Machine</h3>
                         <p>I developed a VLSI project focused on designing a digital vending machine. This involved creating intricate logic circuits and integrating control mechanisms to simulate real-world vending machine operations. Through this project, I gained valuable experience in VLSI design, logic synthesis, and hardware implementation, demonstrating my ability to translate theoretical knowledge into practical digital systems.</p>
                     </div>
+                    <button class="explore-button" onclick="playVideo('vlsi project.mp4')">Explore More</button>
                 </div>
             </div>
         </div>
     </section>
-   <section class="contact" id="contact">
-    <h1 class="heading1">Contact    <span>  Me</span></h1>
-    <div class="icons-container">
-        <div class="icons">
-            <i class="fas fa-envelope"></i>
-            <h3>My Email</h3>
-            <p>ashmitha@gmail.com</p>
-        </div>
-        <div class="icons">
-            <i class="fas fa-phone"></i>
-            <h3>My Number</h3>
-            <p>+123-456-789</p>
-        </div>
-    <div class="icons">
-    <i class="fas fa-map-marker-alt"></i>
-    <h3>My Address</h3>
-    <p>123 Main Road,Hyderabad</p>
+    <section class="contact" id="contact">
+        <!-- Heading -->
+        <h1 class="heading1">Contact <span>Me</span></h1>
+    
+        <!-- Main Content and Form Container -->
+        <div class="contact-container">
+            <!-- Left Content -->
+            <div class="contact-content">
+                <p class="contact-heading">Let's Work Together</p>
+                <p>
+                    I am a passionate and dedicated web enthusiast with expertise in crafting responsive designs, building dynamic user interfaces, and developing efficient web solutions. I thrive on turning creative ideas into reality through innovative and impactful web experiences.<br>
+
+                   Whether it’s designing intuitive user journeys, coding robust solutions, or exploring the latest in web technologies, I am committed to delivering results that exceed expectations and make a difference.
+
+                 <br> <span>Let’s collaborate to create something extraordinary together!</span>
+                </p>
+                <!-- Paragraph -->
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/ashmitha-meda-750324253?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon linkedin" title="LinkedIn">
+            <strong>in</strong> <!-- LinkedIn Text -->
+        </a>
+        <a href="https://github.com/MedaAshmitha" target="_blank" class="social-icon github" title="GitHub">
+            <i class="fab fa-github"></i> <!-- GitHub Logo Icon -->
+        </a>
+        <a href="https://www.facebook.com/share/1B7Ns28L8Z/" target="_blank" class="social-icon facebook" title="Facebook">
+            <strong>f</strong> <!-- Facebook Text -->
+        </a>
+        <a href="mailto:ashmithareddy584@gmail.com"class="social-icon email" title="Email">
+            <i class="fa fa-envelope"></i> <!-- Email Icon -->
+        </a>
+    </div>
 </div>
-</div>
-   </section>
-   <footer id="main-footer">
-    <p> &copy 2024 Ashmitha | All Rights Reserved</p>
-</footer>
+
+            
+            <!-- Contact Form -->
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Enter Your Name" required>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+                <input type="text" name="subject" placeholder="Enter Your Subject" required>
+                <textarea name="message" placeholder="Enter Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+    
+    <!-- JavaScript for Handling Form Submission -->
+    <script>
+        document.querySelector('.contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+    
+            // Capture input values
+            const name = document.querySelector('input[name="name"]').value;
+            const email = document.querySelector('input[name="email"]').value;
+            const subject = document.querySelector('input[name="subject"]').value;
+            const message = document.querySelector('textarea[name="message"]').value;
+    
+            // Display captured values in the console (for testing purposes)
+            console.log(`Name: ${name}`);
+            console.log(`Email: ${email}`);
+            console.log(`Subject: ${subject}`);
+            console.log(`Message: ${message}`);
+    
+            // Display a success message
+            alert('Thank you for reaching out! Your message has been sent successfully.');
+    
+            // Reset the form after submission
+            event.target.reset();
+        });
+    </script>
+    
+    
+    <!-- Footer -->
+    <footer id="main-footer">
+        <p> &copy; 2024 Ashmitha | All Rights Reserved</p>
+    </footer>
+    
 
 </body>
 </html>
